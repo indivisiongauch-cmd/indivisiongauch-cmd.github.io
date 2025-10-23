@@ -1,224 +1,205 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À Vendre : Appartement T3 - Langon Centre</title>
-    <style>
-        /* CSS pour la mise en page en colonne unique */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
+<style>
+    /* CSS pour la mise en page en colonne unique */
+    /* REMARQUE: Les styles pour le BODY ont été retirés pour utiliser le fond de la page */
 
-        /* Conteneur unique, centré */
-        .container {
-            max-width: 800px; /* Largeur optimale pour une seule colonne */
-            margin: auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    /* Conteneur unique, centré */
+    .container {
+        max-width: 800px; /* Largeur optimale pour une seule colonne */
+        margin: auto;
+        padding: 20px;
+        border-radius: 8px;
+        /* background-color et box-shadow peuvent être ajustés/retirés selon le fond de votre blog */
+        background-color: #fff; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
 
-        /* Grille pour les photos (2 colonnes) */
+    /* Grille pour les photos (2 colonnes) */
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales sur grand écran */
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .photo-grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+    }
+
+    /* Styles généraux */
+    h1 {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        text-align: center; /* Centrage du titre */
+        line-height: 1.2;
+    }
+
+    h2 {
+        color: #333;
+        margin-top: 30px;
+    }
+
+    ul {
+        list-style: disc; /* Liste à puces standard */
+        padding-left: 20px;
+        line-height: 1.6;
+    }
+    
+    /* Correction de l'alignement : retrait du style rigide */
+    li strong {
+        display: inline; 
+        color: #555;
+    }
+
+    /* Le prix */
+    .prix {
+        font-size: 2.5em; 
+        color: #dc3545;
+        font-weight: bold;
+        margin: 20px 0;
+        text-align: center;
+        padding: 10px;
+        background-color: #ffe0e3;
+        border-radius: 4px;
+    }
+
+    /* Styles du formulaire de contact */
+    .contact {
+        margin-top: 30px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group textarea { /* Ajout de textarea */
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .contact button {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1.1em;
+        margin-top: 10px;
+    }
+
+    .contact button:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Media Query: Les photos passent sur 1 seule colonne sur mobile */
+    @media (max-width: 600px) {
         .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales sur grand écran */
-            gap: 15px;
-            margin-bottom: 30px;
+            grid-template-columns: 1fr;
         }
+    }
+</style>
 
-        .photo-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            object-fit: cover;
-        }
+<div class="container">
+    
+    <h1>
+        À VENDRE
+        <br>
+        Appartement T3 <strong>Lumineux</strong> - Langon Centre
+    </h1>
+    
+    <div class="prix">
+        143 000 €
+    </div>
+    
+    <div class="photo-grid">
+        <img src="photo1-salon.jpg" alt="Photo du salon">
+        <img src="photo2-cuisine.jpg" alt="Photo de la cuisine">
+        <img src="photo3-chambre1.jpg" alt="Photo chambre 1">
+        <img src="photo4-chambre2.jpg" alt="Photo chambre 2">
+    </div>
 
-        /* Styles généraux */
-        h1 {
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            text-align: center; /* Centrage du titre */
-            line-height: 1.2;
-        }
+    <p>Langon Centre-Ville ! Découvrez ce bel appartement T3 de 72 m² Carrez, idéalement situé au 5ème étage avec ascenseur, offrant une belle luminosité et une vue dégagée sur la ville.</p>
 
-        h2 {
-            color: #333;
-            margin-top: 30px;
-        }
+    <h2>Caractéristiques principales</h2>
+    <ul>
+        <li><strong>Surface :</strong> 72 m² Loi Carrez</li>
+        <li><strong>Type :</strong> T3 (Salon, Cuisine, 2 Chambres)</li>
+        <li><strong>Localisation :</strong> Langon (33210), Plein Centre</li>
+        <li><strong>Étage :</strong> 5ème sur 6, avec ascenseur</li>
+        <li><strong>Chauffage :</strong> Électrique individuel</li>
+        <li><strong>Eau Chaude :</strong> Chauffe-eau au gaz</li>
+        <li><strong>Immeuble :</strong> Construit dans les années 1970</li>
+    </ul>
 
-        ul {
-            list-style: disc; /* Liste à puces standard */
-            padding-left: 20px;
-            line-height: 1.6;
-        }
-        
-        /* Correction de l'alignement : retrait du style rigide */
-        li strong {
-            display: inline; 
-            color: #555;
-        }
+    <h2>Les atouts</h2>
+    <ul>
+        <li><strong>Luminosité :</strong> <strong>Très bonne exposition</strong> (deux portes-fenêtres).</li>
+        <li><strong>Proximité :</strong> Tous les <strong>commerces à 50 mètres</strong>.</li>
+        <li><strong>Transport :</strong> <strong>Gare SNCF à 10 minutes à pied</strong> (accès Bordeaux St-Jean en 30 min).</li>
+        <li><strong>Annexes :</strong> <strong>Parking privé et sécurisé</strong> en sous-sol et <strong>Cave fermée</strong>.</li>
+    </ul>
 
-        /* Ajustement pour l'affichage des informations clés */
-        li span.value {
-            font-weight: bold;
-            color: #000;
-        }
+    <h2>Informations Copropriété & DPE</h2>
+    <ul>
+        <li><strong>DPE :</strong> Classe <strong>E</strong></li> 
+        <li><strong>Copropriété :</strong> Soumis au statut de la copropriété</li>
+        <li><strong>Charges :</strong> Environ 100 € / mois</li>
+    </ul>
 
-        .prix {
-            font-size: 2.5em; /* Taille légèrement augmentée pour le prix seul */
-            color: #dc3545;
-            font-weight: bold;
-            margin: 20px 0;
-            text-align: center;
-            padding: 10px;
-            background-color: #ffe0e3;
-            border-radius: 4px;
-        }
+    <div style="margin: 30px 0;">
+        <h2>Localisation Interactive (Centre-Ville ↔ Gare)</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3380.9714935959937!2d-0.25196284699355664!3d44.5551461725189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1761140870386!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
-        /* Styles du formulaire de contact */
-        .contact {
-            margin-top: 30px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-color: #f9f9f9;
-        }
+    <div class="contact">
+        <h3>Demande de visite ou d'information</h3>
+        <form action="https://formspree.io/f/mvgwezdz" method="POST">
+            
+            <div class="form-group">
+                <label for="nom">Nom et Prénom :</label>
+                <input type="text" id="nom" name="Nom" required>
+            </div>
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+            <div class="form-group">
+                <label for="email">Adresse E-mail :</label>
+                <input type="email" id="email" name="Email" required>
+            </div>
 
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
+            <div class="form-group">
+                <label for="telephone">N° de téléphone à rappeler :</label>
+                <input type="tel" id="telephone" name="Telephone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Votre message :</label>
+                <textarea id="message" name="Message" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit">Contacter le vendeur</button>
+        </form>
+    </div>
 
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group input[type="tel"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .contact button {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 1.1em;
-            margin-top: 10px;
-        }
-
-        .contact button:hover {
-            background-color: #0056b3;
-        }
-        
-        /* Media Query: Les photos passent sur 1 seule colonne sur mobile */
-        @media (max-width: 600px) {
-            .photo-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        
-        <h1>
-            À VENDRE
-            <br>
-            Appartement T3 - 33210 Langon Centre
-        </h1>
-        
-        <div class="prix">
-            143 000 €
-        </div>
-        
-        <div class="photo-grid">
-            <img src="photo1-salon.jpg" alt="Photo du salon">
-            <img src="photo2-cuisine.jpg" alt="Photo de la cuisine">
-            <img src="photo3-chambre1.jpg" alt="Photo chambre 1">
-            <img src="photo4-chambre2.jpg" alt="Photo chambre 2">
-        </div>
-
-        <p>Langon Centre-Ville ! Découvrez ce bel appartement T3 de 72 m² Carrez, idéalement situé au 5ème étage avec ascenseur, offrant une belle luminosité et une vue dégagée sur la ville.</p>
-
-        <h2>Caractéristiques principales</h2>
-        <ul>
-            <li><strong>Surface :</strong> 72 m² Loi Carrez</li>
-            <li><strong>Type :</strong> T3 (Salon, Cuisine, 2 Chambres)</li>
-            <li><strong>Localisation :</strong> Langon (33210), Plein Centre</li>
-            <li><strong>Étage :</strong> 5ème sur 6, avec ascenseur</li>
-            <li><strong>Chauffage :</strong> Électrique individuel</li>
-            <li><strong>Eau Chaude :</strong> Chauffe-eau au gaz</li>
-            <li><strong>Immeuble :</strong> Construit dans les années 1970</li>
-        </ul>
-
-        <h2>Les atouts</h2>
-        <ul>
-            <li><strong>Luminosité :</strong> <strong>Très bonne exposition</strong> (deux portes-fenêtres).</li>
-            <li><strong>Proximité :</strong> Tous les <strong>commerces à 50 mètres</strong>.</li>
-            <li><strong>Transport :</strong> <strong>Gare SNCF à 10 minutes à pied</strong> (accès Bordeaux St-Jean en 30 min).</li>
-            <li><strong>Annexes :</strong> <strong>Parking privé et sécurisé</strong> en sous-sol et <strong>Cave fermée</strong>.</li>
-        </ul>
-
-        <h2>Informations Copropriété & DPE</h2>
-        <ul>
-            <li><strong>DPE :</strong> Classe <strong>E</strong></li> 
-            <li><strong>Copropriété :</strong> Soumis au statut de la copropriété</li>
-            <li><strong>Charges :</strong> Environ 100 € / mois</li>
-        </ul>
-
-        <div style="margin: 30px 0;">
-            <h2>Localisation Interactive (Centre-Ville ↔ Gare)</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3380.9714935959937!2d-0.25196284699355664!3d44.5551461725189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1761140870386!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <div class="contact">
-            <h3>Demande de visite ou d'information</h3>
-            <form action="VOTRE_SCRIPT_DE_TRAITEMENT" method="POST">
-                
-                <div class="form-group">
-                    <label for="nom">Nom et Prénom :</label>
-                    <input type="text" id="nom" name="nom" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Adresse E-mail :</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="telephone">N° de téléphone à rappeler :</label>
-                    <input type="tel" id="telephone" name="telephone" required>
-                </div>
-				
-				<div class="form-group">
-                    <label for="message">Votre message :</label>
-                    <input type="tel" id="message" name="message" required>
-                </div>
-                
-                <button type="submit">Contacter le vendeur</button>
-            </form>
-        </div>
-
-    </div> </body>
-
-</html>
-
+</div>
