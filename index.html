@@ -2,13 +2,17 @@
     /* CSS pour la mise en page en colonne unique */
     /* REMARQUE: Les styles pour le BODY ont été retirés pour utiliser le fond de la page */
 
+    /* NOUVEAU: Définition de la taille de police de base plus grande */
+    .container, p, ul, form {
+        font-size: 1.125em; /* Environ 18px (taille standard plus confortable) */
+    }
+
     /* Conteneur unique, centré */
     .container {
         max-width: 800px; /* Largeur optimale pour une seule colonne */
         margin: auto;
         padding: 20px;
         border-radius: 8px;
-        /* background-color et box-shadow peuvent être ajustés/retirés selon le fond de votre blog */
         background-color: #fff; 
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     }
@@ -37,11 +41,13 @@
         margin-bottom: 20px;
         text-align: center; /* Centrage du titre */
         line-height: 1.2;
+        font-size: 2em; /* Assurez-vous que les titres restent grands */
     }
 
     h2 {
         color: #333;
         margin-top: 30px;
+        font-size: 1.5em; /* Assurez-vous que les sous-titres restent visibles */
     }
 
     ul {
@@ -176,7 +182,7 @@
 
     <div class="contact">
         <h3>Demande de visite ou d'information</h3>
-        <form action="https://formspree.io/f/mvgwezdz" method="POST">
+        <form action="VOTRE_URL_UNIQUE_FORMSPREE" method="POST">
             
             <div class="form-group">
                 <label for="nom">Nom et Prénom :</label>
