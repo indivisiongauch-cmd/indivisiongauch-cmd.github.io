@@ -115,19 +115,12 @@
     /* ================================================= */
     @media (max-width: 600px) {
         
-        /* FIX CHROME MOBILE: Force la taille de base à 16px */
-        html {
-            /* Tente de forcer l'héritage de base pour les navigateurs récalcitrants */
-            font-size: 100% !important; 
-        }
-
-        /* Contenu principal : Augmentation de la taille pour meilleure lisibilité mobile */
+        /* FIX CHROME MOBILE: On force la taille de police en pixels pour le contenu */
         .container, p, ul, form {
-            /* On s'assure que la taille est confortable en EM */
-            font-size: 1.15em; 
+            font-size: 18px !important; /* Force une taille lisible de 18px en pixels */
         }
 
-        /* Les autres ajustements restent valables pour mobile */
+        /* Titres : Ajustement des titres en fonction de la nouvelle base de 18px */
         h1 { font-size: 1.8em; }
         h2 { font-size: 1.4em; }
         .prix { font-size: 2.3em; }
@@ -216,6 +209,7 @@
     </div>
 
 </div>
+
 
 
 
