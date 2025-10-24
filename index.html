@@ -1,10 +1,8 @@
 <style>
-    /* CSS pour la mise en page en colonne unique */
-    /* REMARQUE: Les styles pour le BODY ont été retirés pour utiliser le fond de la page */
-
-    /* NOUVEAU: Définition de la taille de police de base plus grande */
+    /* NOUVEAU: La police Verdana est définie ici */
     .container, p, ul, form {
-        font-size: 1.125em; /* Environ 18px (taille standard plus confortable) */
+        font-family: Verdana, Geneva, sans-serif; 
+        font-size: 1.125em; /* Environ 18px pour une meilleure lisibilité mobile */
     }
 
     /* Conteneur unique, centré */
@@ -35,19 +33,21 @@
 
     /* Styles généraux */
     h1 {
+        font-family: Verdana, Geneva, sans-serif; /* Police appliquée aux titres */
         color: #007bff;
         border-bottom: 2px solid #007bff;
         padding-bottom: 10px;
         margin-bottom: 20px;
         text-align: center; /* Centrage du titre */
         line-height: 1.2;
-        font-size: 2em; /* Assurez-vous que les titres restent grands */
+        font-size: 2em; 
     }
 
     h2 {
+        font-family: Verdana, Geneva, sans-serif; /* Police appliquée aux sous-titres */
         color: #333;
         margin-top: 30px;
-        font-size: 1.5em; /* Assurez-vous que les sous-titres restent visibles */
+        font-size: 1.5em; 
     }
 
     ul {
@@ -72,6 +72,7 @@
         padding: 10px;
         background-color: #ffe0e3;
         border-radius: 4px;
+        font-family: Verdana, Geneva, sans-serif; /* Police appliquée au prix */
     }
 
     /* Styles du formulaire de contact */
@@ -102,6 +103,7 @@
         border: 1px solid #ddd;
         border-radius: 4px;
         box-sizing: border-box;
+        font-family: Verdana, Geneva, sans-serif;
     }
 
     .contact button {
@@ -114,6 +116,7 @@
         width: 100%;
         font-size: 1.1em;
         margin-top: 10px;
+        font-family: Verdana, Geneva, sans-serif;
     }
 
     .contact button:hover {
@@ -127,85 +130,3 @@
         }
     }
 </style>
-
-<div class="container">
-    
-    <h1>
-        À VENDRE
-        <br>
-        Appartement T3 <strong>Lumineux</strong> - Langon Centre
-    </h1>
-    
-    <div class="prix">
-        143 000 €
-    </div>
-    
-    <div class="photo-grid">
-        <img src="photo1-salon.jpg" alt="Photo du salon">
-        <img src="photo2-cuisine.jpg" alt="Photo de la cuisine">
-        <img src="photo3-chambre1.jpg" alt="Photo chambre 1">
-        <img src="photo4-chambre2.jpg" alt="Photo chambre 2">
-    </div>
-
-    <p>Langon Centre-Ville ! Découvrez ce bel appartement T3 de 72 m² Carrez, idéalement situé au 5ème étage avec ascenseur, offrant une belle luminosité et une vue dégagée sur la ville.</p>
-
-    <h2>Caractéristiques principales</h2>
-    <ul>
-        <li><strong>Surface :</strong> 72 m² Loi Carrez</li>
-        <li><strong>Type :</strong> T3 (Salon, Cuisine, 2 Chambres)</li>
-        <li><strong>Localisation :</strong> Langon (33210), Plein Centre</li>
-        <li><strong>Étage :</strong> 5ème sur 6, avec ascenseur</li>
-        <li><strong>Chauffage :</strong> Électrique individuel</li>
-        <li><strong>Eau Chaude :</strong> Chauffe-eau au gaz</li>
-        <li><strong>Immeuble :</strong> Construit dans les années 1970</li>
-    </ul>
-
-    <h2>Les atouts</h2>
-    <ul>
-        <li><strong>Luminosité :</strong> <strong>Très bonne exposition</strong> (deux portes-fenêtres).</li>
-        <li><strong>Proximité :</strong> Tous les <strong>commerces à 50 mètres</strong>.</li>
-        <li><strong>Transport :</strong> <strong>Gare SNCF à 10 minutes à pied</strong> (accès Bordeaux St-Jean en 30 min).</li>
-        <li><strong>Annexes :</strong> <strong>Parking privé et sécurisé</strong> en sous-sol et <strong>Cave fermée</strong>.</li>
-    </ul>
-
-    <h2>Informations Copropriété & DPE</h2>
-    <ul>
-        <li><strong>DPE :</strong> Classe <strong>E</strong></li> 
-        <li><strong>Copropriété :</strong> Soumis au statut de la copropriété</li>
-        <li><strong>Charges :</strong> Environ 100 € / mois</li>
-    </ul>
-
-    <div style="margin: 30px 0;">
-        <h2>Localisation Interactive (Centre-Ville ↔ Gare)</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3380.9714935959937!2d-0.25196284699355664!3d44.5551461725189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1761140870386!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <div class="contact">
-        <h3>Demande de visite ou d'information</h3>
-        <form action="VOTRE_URL_UNIQUE_FORMSPREE" method="POST">
-            
-            <div class="form-group">
-                <label for="nom">Nom et Prénom :</label>
-                <input type="text" id="nom" name="Nom" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Adresse E-mail :</label>
-                <input type="email" id="email" name="Email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="telephone">N° de téléphone à rappeler :</label>
-                <input type="tel" id="telephone" name="Telephone" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Votre message :</label>
-                <textarea id="message" name="Message" rows="4" required></textarea>
-            </div>
-            
-            <button type="submit">Contacter le vendeur</button>
-        </form>
-    </div>
-
-</div>
