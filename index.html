@@ -42,19 +42,19 @@
         margin-bottom: 20px;
         text-align: center;
         line-height: 1.2;
-        font-size: 2em; /* Taille pour PC */
+        font-size: 2em; 
     }
 
     h2 {
         font-family: Verdana, Geneva, sans-serif; 
         color: #333;
         margin-top: 30px;
-        font-size: 1.5em; /* Taille pour PC */
+        font-size: 1.5em; 
     }
 
     /* Le prix */
     .prix {
-        font-size: 2.2em; /* Légèrement réduit pour PC */
+        font-size: 2.2em;
         color: #dc3545;
         font-weight: bold;
         margin: 20px 0;
@@ -65,15 +65,49 @@
         font-family: Verdana, Geneva, sans-serif; 
     }
 
-    /* Styles du formulaire et listes (inchangés) */
+    /* Styles des listes */
     ul { list-style: disc; padding-left: 20px; line-height: 1.6; }
     li strong { display: inline; color: #555; }
-    .contact { margin-top: 30px; padding: 20px; border: 1px solid #ccc; border-radius: 4px; background-color: #f9f9f9; }
-    .form-group { margin-bottom: 15px; }
-    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
-    .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="tel"], .form-group textarea {
-        width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-family: Verdana, Geneva, sans-serif;
+
+    /* Styles du formulaire de contact */
+    .contact {
+        margin-top: 30px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f9f9f9;
     }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    /* CHAMPS DE FORMULAIRE (INPUT ET TEXTAREA) - MODIFICATION ICI */
+    .form-group input[type="text"], 
+    .form-group input[type="email"], 
+    .form-group input[type="tel"], 
+    .form-group textarea {
+        width: 100%; 
+        padding: 10px;
+        /* Ajout d'une hauteur minimale pour tous les champs */
+        min-height: 40px; 
+        border: 1px solid #ddd; 
+        border-radius: 4px; 
+        box-sizing: border-box; 
+        font-family: Verdana, Geneva, sans-serif;
+    }
+
+    /* Ajustement de la hauteur par défaut pour le champ message (textarea) */
+    .form-group textarea {
+        min-height: 100px; /* Hauteur minimale plus grande pour la zone de message */
+    }
+
     .contact button {
         background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; width: 100%;
         font-size: 1.1em; margin-top: 10px; font-family: Verdana, Geneva, sans-serif;
@@ -192,5 +226,6 @@
     </div>
 
 </div>
+
 
 
