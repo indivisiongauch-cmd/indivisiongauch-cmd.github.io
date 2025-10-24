@@ -20,7 +20,7 @@
     /* Grille pour les photos (2 colonnes) */
     .photo-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales sur grand écran */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 15px;
         margin-bottom: 30px;
     }
@@ -33,7 +33,7 @@
         object-fit: cover;
     }
 
-    /* Styles généraux */
+    /* Styles généraux des titres et prix */
     h1 {
         font-family: Verdana, Geneva, sans-serif; 
         color: #007bff;
@@ -52,7 +52,6 @@
         font-size: 1.5em; 
     }
 
-    /* Le prix */
     .prix {
         font-size: 2.2em;
         color: #dc3545;
@@ -60,7 +59,7 @@
         margin: 20px 0;
         text-align: center;
         padding: 10px;
-        background-color: #ffe0e3;
+        background-color: #ffe0e0;
         border-radius: 4px;
         font-family: Verdana, Geneva, sans-serif; 
     }
@@ -88,24 +87,21 @@
         font-weight: bold;
     }
 
-    /* CHAMPS DE FORMULAIRE (INPUT ET TEXTAREA) - MODIFICATION ICI */
+    /* CHAMPS DE FORMULAIRE (INPUT ET TEXTAREA) */
     .form-group input[type="text"], 
     .form-group input[type="email"], 
     .form-group input[type="tel"], 
     .form-group textarea {
         width: 100%; 
         padding: 10px;
-        /* Ajout d'une hauteur minimale pour tous les champs */
         min-height: 40px; 
         border: 1px solid #ddd; 
         border-radius: 4px; 
         box-sizing: border-box; 
         font-family: Verdana, Geneva, sans-serif;
     }
-
-    /* Ajustement de la hauteur par défaut pour le champ message (textarea) */
     .form-group textarea {
-        min-height: 100px; /* Hauteur minimale plus grande pour la zone de message */
+        min-height: 100px; 
     }
 
     .contact button {
@@ -119,29 +115,23 @@
     /* ================================================= */
     @media (max-width: 600px) {
         
+        /* FIX CHROME MOBILE: Force la taille de base à 16px */
+        html {
+            /* Tente de forcer l'héritage de base pour les navigateurs récalcitrants */
+            font-size: 100% !important; 
+        }
+
         /* Contenu principal : Augmentation de la taille pour meilleure lisibilité mobile */
         .container, p, ul, form {
+            /* On s'assure que la taille est confortable en EM */
             font-size: 1.15em; 
         }
 
-        /* Titres : Légèrement réduits pour éviter de casser la mise en page */
-        h1 {
-            font-size: 1.8em; 
-        }
-
-        h2 {
-            font-size: 1.4em; 
-        }
-
-        /* Prix : Maintenu grand et lisible */
-        .prix {
-            font-size: 2.3em;
-        }
-
-        /* Photos : Passage à une colonne */
-        .photo-grid {
-            grid-template-columns: 1fr;
-        }
+        /* Les autres ajustements restent valables pour mobile */
+        h1 { font-size: 1.8em; }
+        h2 { font-size: 1.4em; }
+        .prix { font-size: 2.3em; }
+        .photo-grid { grid-template-columns: 1fr; }
     }
 </style>
 
@@ -226,6 +216,7 @@
     </div>
 
 </div>
+
 
 
 
