@@ -87,21 +87,21 @@
         font-weight: bold;
     }
 
-    /* CHAMPS DE FORMULAIRE (INPUT ET TEXTAREA) */
+    /* CHAMPS DE FORMULAIRE (INPUT ET TEXTAREA) - Hauteurs forcées pour meilleure UX */
     .form-group input[type="text"], 
     .form-group input[type="email"], 
     .form-group input[type="tel"], 
     .form-group textarea {
         width: 100%; 
         padding: 10px;
-        min-height: 40px; 
+        min-height: 40px; /* Hauteur minimale pour les champs de texte/mail/tél */
         border: 1px solid #ddd; 
         border-radius: 4px; 
         box-sizing: border-box; 
         font-family: Verdana, Geneva, sans-serif;
     }
     .form-group textarea {
-        min-height: 100px; 
+        min-height: 100px; /* Hauteur minimale pour la zone de message */
     }
 
     .contact button {
@@ -115,7 +115,7 @@
     /* ================================================= */
     @media (max-width: 600px) {
         
-        /* FIX CHROME MOBILE: On force la taille de police en pixels pour le contenu */
+        /* FIX CHROME MOBILE: Force la taille de police en pixels pour le contenu */
         .container, p, ul, form {
             font-size: 18px !important; /* Force une taille lisible de 18px en pixels */
         }
@@ -182,7 +182,7 @@
 
     <div class="contact">
         <h3>Demande de visite ou d'information</h3>
-        <form action="VOTRE_URL_UNIQUE_FORMSPREE" method="POST">
+        <form action="https://formspree.io/f/mvgwezdz" method="POST">
             
             <div class="form-group">
                 <label for="nom">Nom et Prénom :</label>
