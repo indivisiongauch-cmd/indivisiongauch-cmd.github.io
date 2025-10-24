@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À Vendre : Appartement T3 - Langon Centre</title>
 <style>
     /* CSS pour la mise en page en colonne unique */
     
@@ -9,7 +11,7 @@
 
     /* Conteneur unique, centré */
     .container {
-        max-width: 800px; /* Largeur optimale pour une seule colonne */
+        max-width: 800px; 
         margin: auto;
         padding: 20px;
         border-radius: 8px;
@@ -64,46 +66,16 @@
         font-family: Verdana, Geneva, sans-serif; 
     }
 
-    /* Styles des listes */
+    /* Styles des listes et formulaire */
     ul { list-style: disc; padding-left: 20px; line-height: 1.6; }
     li strong { display: inline; color: #555; }
-
-    /* Styles du formulaire de contact */
-    .contact {
-        margin-top: 30px;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background-color: #f9f9f9;
+    .contact { margin-top: 30px; padding: 20px; border: 1px solid #ccc; border-radius: 4px; background-color: #f9f9f9; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+    .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="tel"], .form-group textarea {
+        width: 100%; padding: 10px; min-height: 40px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-family: Verdana, Geneva, sans-serif;
     }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-
-    /* CHAMPS DE FORMULAIRE (INPUT ET TEXTAREA) - Hauteurs forcées pour meilleure UX */
-    .form-group input[type="text"], 
-    .form-group input[type="email"], 
-    .form-group input[type="tel"], 
-    .form-group textarea {
-        width: 100%; 
-        padding: 10px;
-        min-height: 40px; /* Hauteur minimale pour les champs de texte/mail/tél */
-        border: 1px solid #ddd; 
-        border-radius: 4px; 
-        box-sizing: border-box; 
-        font-family: Verdana, Geneva, sans-serif;
-    }
-    .form-group textarea {
-        min-height: 100px; /* Hauteur minimale pour la zone de message */
-    }
-
+    .form-group textarea { min-height: 100px; }
     .contact button {
         background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; width: 100%;
         font-size: 1.1em; margin-top: 10px; font-family: Verdana, Geneva, sans-serif;
@@ -115,15 +87,17 @@
     /* ================================================= */
     @media (max-width: 600px) {
         
-        /* FIX CHROME MOBILE: Force la taille de police en pixels pour le contenu */
+        /* FIX CHROME MOBILE: Utilisation des rem pour forcer une taille de base */
         .container, p, ul, form {
-            font-size: 19px !important; /* Force une taille lisible de 18px en pixels */
+            font-size: 1.15rem !important; /* Forte priorité pour la lisibilité */
         }
 
-        /* Titres : Ajustement des titres en fonction de la nouvelle base de 18px */
-        h1 { font-size: 1.8em; }
-        h2 { font-size: 1.4em; }
-        .prix { font-size: 2.3em; }
+        /* Ajustement des titres */
+        h1 { font-size: 1.8rem; }
+        h2 { font-size: 1.4rem; }
+        .prix { font-size: 2.3rem; }
+        
+        /* Photos : Passage à une colonne */
         .photo-grid { grid-template-columns: 1fr; }
     }
 </style>
@@ -182,7 +156,7 @@
 
     <div class="contact">
         <h3>Demande de visite ou d'information</h3>
-        <form action="https://formspree.io/f/mvgwezdz" method="POST">
+        <form action="VOTRE_URL_UNIQUE_FORMSPREE" method="POST">
             
             <div class="form-group">
                 <label for="nom">Nom et Prénom :</label>
@@ -209,6 +183,7 @@
     </div>
 
 </div>
+
 
 
 
