@@ -1,10 +1,10 @@
 <style>
     /* CSS pour la mise en page en colonne unique */
     
-    /* NOUVEAU: Définition de la police Verdana pour une meilleure lisibilité */
+    /* STYLE DE BASE (POUR PC ET GRANDS ÉCRANS) */
     .container, p, ul, form {
         font-family: Verdana, Geneva, sans-serif; 
-        font-size: 1.125em; /* Environ 18px (taille standard plus confortable) */
+        font-size: 1em; /* Taille standard pour PC (environ 16px) */
     }
 
     /* Conteneur unique, centré */
@@ -35,38 +35,26 @@
 
     /* Styles généraux */
     h1 {
-        font-family: Verdana, Geneva, sans-serif; /* Application de la police aux titres */
+        font-family: Verdana, Geneva, sans-serif; 
         color: #007bff;
         border-bottom: 2px solid #007bff;
         padding-bottom: 10px;
         margin-bottom: 20px;
-        text-align: center; /* Centrage du titre */
+        text-align: center;
         line-height: 1.2;
-        font-size: 2em; 
+        font-size: 2em; /* Taille pour PC */
     }
 
     h2 {
-        font-family: Verdana, Geneva, sans-serif; /* Application de la police aux sous-titres */
+        font-family: Verdana, Geneva, sans-serif; 
         color: #333;
         margin-top: 30px;
-        font-size: 1.5em; 
-    }
-
-    ul {
-        list-style: disc; /* Liste à puces standard */
-        padding-left: 20px;
-        line-height: 1.6;
-    }
-    
-    /* Correction de l'alignement : retrait du style rigide */
-    li strong {
-        display: inline; 
-        color: #555;
+        font-size: 1.5em; /* Taille pour PC */
     }
 
     /* Le prix */
     .prix {
-        font-size: 2.5em; 
+        font-size: 2.2em; /* Légèrement réduit pour PC */
         color: #dc3545;
         font-weight: bold;
         margin: 20px 0;
@@ -74,57 +62,49 @@
         padding: 10px;
         background-color: #ffe0e3;
         border-radius: 4px;
-        font-family: Verdana, Geneva, sans-serif; /* Police appliquée au prix */
+        font-family: Verdana, Geneva, sans-serif; 
     }
 
-    /* Styles du formulaire de contact */
-    .contact {
-        margin-top: 30px;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background-color: #f9f9f9;
+    /* Styles du formulaire et listes (inchangés) */
+    ul { list-style: disc; padding-left: 20px; line-height: 1.6; }
+    li strong { display: inline; color: #555; }
+    .contact { margin-top: 30px; padding: 20px; border: 1px solid #ccc; border-radius: 4px; background-color: #f9f9f9; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+    .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="tel"], .form-group textarea {
+        width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-family: Verdana, Geneva, sans-serif;
     }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group input[type="tel"],
-    .form-group textarea { /* Ajout de textarea */
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-
     .contact button {
-        background-color: #007bff;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 100%;
-        font-size: 1.1em;
-        margin-top: 10px;
+        background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; width: 100%;
+        font-size: 1.1em; margin-top: 10px; font-family: Verdana, Geneva, sans-serif;
     }
+    .contact button:hover { background-color: #0056b3; }
 
-    .contact button:hover {
-        background-color: #0056b3;
-    }
-    
-    /* Media Query: Les photos passent sur 1 seule colonne sur mobile */
+    /* ================================================= */
+    /* MEDIA QUERY: OPTIMISATION POUR SMARTPHONES (< 600px) */
+    /* ================================================= */
     @media (max-width: 600px) {
+        
+        /* Contenu principal : Augmentation de la taille pour meilleure lisibilité mobile */
+        .container, p, ul, form {
+            font-size: 1.15em; 
+        }
+
+        /* Titres : Légèrement réduits pour éviter de casser la mise en page */
+        h1 {
+            font-size: 1.8em; 
+        }
+
+        h2 {
+            font-size: 1.4em; 
+        }
+
+        /* Prix : Maintenu grand et lisible */
+        .prix {
+            font-size: 2.3em;
+        }
+
+        /* Photos : Passage à une colonne */
         .photo-grid {
             grid-template-columns: 1fr;
         }
@@ -212,3 +192,4 @@
     </div>
 
 </div>
+
