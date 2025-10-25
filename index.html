@@ -27,12 +27,31 @@
         margin-bottom: 30px;
     }
 
+    /* Conteneur de chaque photo (image + titre) */
+    .photo-item {
+        display: flex; /* Permet d'aligner la légende si nécessaire */
+        flex-direction: column;
+        align-items: center; /* Centre le titre */
+        text-align: center;
+    }
+    
     .photo-grid img {
         width: 100%;
         height: auto;
         border-radius: 4px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         object-fit: cover;
+        margin-bottom: 5px; /* Petit espace entre l'image et le titre */
+    }
+
+    /* Style du titre sous la photo */
+    .photo-caption {
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #555;
+        padding: 5px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
     /* Styles généraux des titres et prix */
@@ -114,6 +133,24 @@
         143 000 €
     </div>
 
+    <div class="photo-grid">
+        <div class="photo-item">
+            <img src="sejour.jpg" alt="Photo séjour">
+            <span class="photo-caption">Séjour</span>
+        </div>
+        <div class="photo-item">
+            <img src="cuisine.jpg" alt="Photo cuisine">
+            <span class="photo-caption">Cuisine</span>
+        </div>
+        <div class="photo-item">
+            <img src="chambre1.jpg" alt="Photo chambre 1">
+            <span class="photo-caption">Chambre 1</span>
+        </div>
+        <div class="photo-item">
+            <img src="chambre2.jpg" alt="Photo chambre 2">
+            <span class="photo-caption">Chambre 2</span>
+        </div>
+    </div>
     <p>Langon Centre-Ville ! Découvrez ce bel appartement T3 de 72 m² Carrez, idéalement situé au 5ème étage avec ascenseur, offrant une belle luminosité et une vue dégagée sur la ville.</p>
 
     <h2>Caractéristiques principales</h2>
@@ -141,12 +178,7 @@
         <li><strong>Copropriété :</strong> Soumis au statut de la copropriété</li>
         <li><strong>Charges :</strong> Environ 100 € / mois</li>
     </ul>
-<div class="photo-grid">
-    <img src="https://drive.google.com/thumbnail?id=1rFmTCLvglopHVStiMyS5_U0R4A4gSVOD" alt="Photo séjour">
-	<img src="https://drive.google.com/thumbnail?id=1_6UtGqTuuMvQQJcRSIKFnLFyCR69aokv" alt="Photo cuisine">
-	<img src="https://drive.google.com/thumbnail?id=1IduY1Qn2h33aMlmQPiH0tcPKC9uTtVZc" alt="Photo chambre 1">
-	<img src="https://drive.google.com/thumbnail?id=1VSn6tYp-lRuuUIHWhcdLdTdQXOIJ26xn" alt="Photo chambre 2">
-</div>
+
     <div style="margin: 30px 0;">
         <h2>Localisation Interactive (Centre-Ville ↔ Gare)</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3380.9714935959937!2d-0.25196284699355664!3d44.5551461725189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1761140870386!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -181,6 +213,7 @@
     </div>
 
 </div>
+
 
 
 
