@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos Supplémentaires - Appartement T3 Langon</title>
+    <style>
+        /* CSS pour la mise en page en colonne unique */
+        
+        /* STYLE DE BASE (POUR PC ET GRANDS ÉCRANS) */
+        .container, p, ul, form {
+            font-family: Verdana, Geneva, sans-serif; 
+            font-size: 1em;
+        }
+
+        /* Conteneur unique, centré */
+        .container {
+            max-width: 800px; 
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        /* Grille pour les photos (2 colonnes) */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* Conteneur de chaque photo (image + titre) */
+        .photo-item {
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            text-align: center;
+        }
+        
+        /* La première photo doit prendre toute la largeur */
+        .photo-grid .first-photo {
+            grid-column: 1 / -1; /* S'étend sur les deux colonnes */
+        }
+        
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            margin-bottom: 5px; 
+        }
+
+        /* Style du titre sous la photo */
+        .photo-caption {
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #555;
+            padding: 5px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Styles généraux des titres et prix */
+        h1 {
+            font-family: Verdana, Geneva, sans-serif; 
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 1.2;
+            font-size: 2em; 
+        }
+
+        h2 {
+            font-family: Verdana, Geneva, sans-serif; 
+            color: #333;
+            margin-top: 30px;
+            font-size: 1.5em; 
+        }
+
+        .prix {
+            font-size: 2.2em;
+            color: #dc3545;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+            padding: 10px;
+            background-color: #ffe0e0;
+            border-radius: 4px;
+            font-family: Verdana, Geneva, sans-serif; 
+        }
+        
+        /* Style du bouton retour */
+        .btn-retour {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #6c757d; /* Gris */
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: Verdana, Geneva, sans-serif;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .btn-retour:hover {
+            background-color: #5a6268;
+        }
+
+        /* MEDIA QUERY: OPTIMISATION POUR SMARTPHONES (< 600px) */
+        @media (max-width: 600px) {
+            
+            .container, p, ul, form {
+                font-size: 1.15rem !important;
+            }
+
+            /* Ajustement des titres */
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+            .prix { font-size: 2.3rem; }
+            
+            /* Photos : Passage à une colonne */
+            .photo-grid { grid-template-columns: 1fr; }
+            .photo-grid .first-photo {
+                grid-column: auto; /* Supprime l'extension sur mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>
+            À VENDRE
+            <br>
+            Appartement T3 <strong>- 33210</strong> - Langon Centre
+        </h1>
+        
+        <div class="prix">
+            143 000 €
+        </div>
+        
+        <h2>Photos Supplémentaires</h2>
+        
+        <a href="index.html" class="btn-retour">← Retour à l'annonce principale</a>
+
+        <div class="photo-grid">
+            
+            <div class="photo-item first-photo">
+                <img src="vue.jpeg" alt="Vue dégagée de l'appartement">
+                <span class="photo-caption">Vue</span>
+            </div>
+            
+            <div class="photo-item">
+                <img src="baignoire.jpeg" alt="Salle de bain avec baignoire">
+                <span class="photo-caption">Baignoire</span>
+            </div>
+            <div class="photo-item">
+                <img src="placard.jpeg" alt="Placard intégré dans une chambre">
+                <span class="photo-caption">Placard</span>
+            </div>
+            <div class="photo-item">
+                <img src="sam.jpeg" alt="Coin salle à manger">
+                <span class="photo-caption">Salle à Manger</span>
+            </div>
+            <div class="photo-item">
+                <img src="sdb.jpeg" alt="Détail de la salle de bain">
+                <span class="photo-caption">Salle de Bain</span>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-retour">← Retour à l'annonce principale</a>
+        
+        </div>
+</body>
+</html>
